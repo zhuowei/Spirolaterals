@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Spirolaterals: Version 0.26</title>
+<!--[if lt IE 9]><script src="excanvas.js"></script><![endif]-->
+<script src="util.js" type="text/javascript"></script>
+<script src="patterns.js" type="text/javascript"></script>
+<script src="turtle.js" type="text/javascript"></script>
+<script src="spiral.js" type="text/javascript"></script>
+<link rel="stylesheet" href="sp_style.css" type="text/css" />
+</head>
+<body>
+<div> <canvas id="computer_canvas" width="450" height="450"></canvas> <canvas id="player_canvas" width="450" height="450"></canvas> </div>
+<table>
+<tr>
+<td>
+<button id="step">Step</button><button id="run">Start</button><button id="bam">Bam!</button><br />
+<span id="level">Loading</span> <span id="lifelines"></span><button id="hint_button">Hint</button><br />
+
+<span style="text-shadow: 1px 1px 10px yellow, 1px 1px 3px yellow">Spirolaterals, Version 0.26</span><button id="help_button"><img src="help.png" alt="help/about"/></button>
+</td>
+<td>
+<table>
+<tr>
+<td>
+<button class="digit_button" id="up_button_digit_0"><img src="up.png" alt="up"/></button>
+</td><td>
+<button class="digit_button" id="up_button_digit_1"><img src="up.png" alt="up"/></button>
+</td><td>
+<button class="digit_button" id="up_button_digit_2"><img src="up.png" alt="up"/></button>
+</td><td>
+<button class="digit_button" id="up_button_digit_3"><img src="up.png" alt="up"/></button>
+</td><td>
+<button class="digit_button" id="up_button_digit_4"><img src="up.png" alt="up"/></button>
+</td>
+</tr>
+<tr class="pattern_digit">
+<td id="digit_0"></td>
+<td id="digit_1"></td>
+<td id="digit_2"></td>
+<td id="digit_3"></td>
+<td id="digit_4"></td>
+</tr>
+<tr>
+<td>
+<button class="digit_button" id="down_button_digit_0"><img src="down.png" alt="down"/></button>
+</td><td>
+<button class="digit_button" id="down_button_digit_1"><img src="down.png" alt="down"/></button>
+</td><td>
+<button class="digit_button" id="down_button_digit_2"><img src="down.png" alt="down"/></button>
+</td><td>
+<button class="digit_button" id="down_button_digit_3"><img src="down.png" alt="down"/></button>
+</td><td>
+<button class="digit_button" id="down_button_digit_4"><img src="down.png" alt="down"/></button>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div style="display:none;position:absolute;left:20%;top:20%;background-color:#888888;width:60%;height:60%;font-size:0.8em;overflow:auto" id="help_text">
+<h3>Help</h3>
+Make your pattern on the right match the one drawn by the computer on the left.
+Change your pattern by modifying the numbers with the arrow keys. <br/>
+Click "Step" to draw one part, or "Start" to repeatly draw the pattern, one step at a time.
+click Bam to draw all of the pattern at the same time.
+If you need a hint, you can use a lifeline by clicking on the Hint button. You get an extra lifeline every three levels.
+I think you can figure out the rest.<br/>
+<button onclick="hideHelp()">Close</button><br/>
+<h3>Credits</h3>
+This is a clone of the Sugar Activity "Spirolaterals", by mulawa1. 
+The image for the turtle and the levels are borrowed from it.
+The other icons are from the Tango project. The explosion is from the Public Domain.
+<p>
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+<p>
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+<p>
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <a href="http://www.gnu.org/licenses/" target="_blank">http://www.gnu.org/licenses/</a>.
+</p>
+<br/>
+<button onclick="hideHelp()">Close</button>
+</div>
+</body>
+</html>
